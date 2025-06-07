@@ -1,0 +1,54 @@
+🏠 House Rent Prediction
+This project aims to predict rental prices for housing properties based on key features such as size, location, furnishing status, and number of rooms. It demonstrates how real estate platforms can leverage machine learning to provide smarter recommendations aligned with a user’s budget.
+
+📌 Problem Statement
+Rent depends on several factors:
+Number of bedrooms and bathrooms
+House size (sq. ft.)
+Floor level and area type
+City location and pin code
+Furnishing status
+Tenant preference
+This project uses a deep learning model to predict house rent accurately based on historical data.
+
+📁 Dataset Overview
+📄 File: House_Rent_Dataset.csv
+🔢 Records: 4,746
+🎯 Target Variable: Rent
+🧾 Key Features:
+BHK, Size, Bathroom
+Area Type, City, Furnishing Status, Tenant Preferred
+
+📊 Exploratory Data Analysis
+Visualized rent variation across cities by:
+BHK configuration
+Area type
+Furnishing status
+Property size
+Used bar plots and pie charts for insights like tenant preferences and city-wise housing availability
+
+🧠 Model Building
+Categorical features mapped to numerical values
+Normalized and split data into training/test sets
+Built an LSTM Neural Network using Keras
+
+model = Sequential()
+model.add(LSTM(128, return_sequences=True, input_shape=(7, 1)))
+model.add(LSTM(64, return_sequences=False))
+model.add(Dense(25))
+model.add(Dense(1))
+Optimizer: Adam
+
+Loss Function: Mean Squared Error
+Trained for 21 epochs
+
+✅ Results
+The model learned non-linear relationships between rent and property features
+Sample Prediction:
+Input → 3 BHK, 23 sq. ft., Semi-Furnished, 2 Baths
+Output → Predicted Rent ≈ ₹42,608
+
+🛠️ Future Improvements
+Incorporate additional location-based features like landmarks, transport
+Use advanced regression models or ensemble techniques
+Hyperparameter tuning for better generalization
