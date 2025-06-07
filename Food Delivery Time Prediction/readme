@@ -1,0 +1,59 @@
+🍔 Food Delivery Time Prediction
+This project aims to predict real-time food delivery times using machine learning. Companies like Zomato and Swiggy rely on such models to estimate delivery durations and ensure transparency with customers.
+
+📌 Problem Statement
+Accurate prediction of delivery time depends on various factors such as:
+Distance between the restaurant and delivery location
+Age and ratings of the delivery partner
+Type of food and vehicle used
+This project explores these features and trains a neural network model to predict delivery time in minutes.
+
+📁 Dataset Overview
+🔢 Records: 45,593
+📄 File: deliverytime.txt
+🚚 Target: Time_taken(min)
+
+🧾 Key Features:
+Delivery_person_Age
+Delivery_person_Ratings
+Restaurant_latitude/longitude
+Delivery_location_latitude/longitude
+Type_of_order
+Type_of_vehicle
+
+📍 Feature Engineering
+Calculated geodesic distance using the Haversine formula
+Identified top factors impacting delivery time:
+Partner’s age and rating
+Distance between restaurant and customer
+
+📊 Exploratory Analysis
+📈 Distance vs Time: Positive correlation
+
+👤 Partner Age vs Time: Older partners may be quicker
+⭐ Ratings vs Time: Better-rated partners tend to deliver faster
+🍱 Vehicle & Order Type: Motorcycles perform better for snacks
+🧠 Model Building
+Model: LSTM Neural Network
+
+Inputs: Delivery_person_Age, Delivery_person_Ratings, distance
+Libraries: TensorFlow, Keras, scikit-learn
+model = Sequential()
+model.add(LSTM(128, return_sequences=True, input_shape=(3, 1)))
+model.add(LSTM(64, return_sequences=False))
+model.add(Dense(25))
+model.add(Dense(1))
+Optimizer: Adam
+
+Loss Function: Mean Squared Error
+Trained for 9 epochs with batch size = 1
+
+✅ Results
+Training loss converged to ~69 MSE
+
+Sample prediction: A 23-year-old partner with 1-star rating and 10km distance → ~33 mins
+
+🛠️ Future Work
+Add more dynamic features like traffic, weather
+Optimize LSTM architecture and tune hyperparameters
+Experiment with ensemble or gradient boosting models
