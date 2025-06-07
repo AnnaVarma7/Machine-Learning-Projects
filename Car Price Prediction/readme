@@ -1,0 +1,46 @@
+🚗 Car Price Prediction using Machine Learning
+This project focuses on building a machine learning model to predict the price of a car based on multiple technical and physical features. It's a classic regression problem involving feature engineering, data visualization, and model evaluation.
+
+📊 Problem Statement
+Car prices vary based on several attributes like engine size, horsepower, mileage, and more. This project aims to predict car prices using a Decision Tree Regressor based on these features.
+
+📁 Dataset Overview
+📄 File: Car Model dataset.txt
+🔢 Records: 205
+📌 Features: 26 (including categorical and numerical)
+Target Variable: price
+Feature Examples: wheelbase, curbweight, enginesize, horsepower, citympg, highwaympg
+
+🧰 Technologies Used
+Python
+pandas, numpy
+seaborn, matplotlib
+scikit-learn (for modeling and preprocessing)
+
+📈 Key Steps
+Exploratory Data Analysis:
+Checked for null values
+Generated correlation heatmaps
+Visualized price distribution
+
+Feature Engineering:
+Selected 14 numerical features
+Standardized input data
+
+Model Building:
+Used DecisionTreeRegressor from sklearn
+Achieved high performance (R² = 1.0 on test set)
+
+Evaluation Metrics:
+Mean Absolute Error (MAE)
+Mean Squared Error (MSE)
+R² Score
+
+🧠 Outcome
+The Decision Tree model predicted car prices with 100% accuracy on the test data, highlighting strong predictive features like curbweight, enginesize, and horsepower.
+
+🚀 Future Improvements
+Try ensemble models like Random Forest or XGBoost
+Handle categorical data (e.g., CarName, fueltype)
+Perform hyperparameter tuning
+Deploy model via Flask or Streamlit
