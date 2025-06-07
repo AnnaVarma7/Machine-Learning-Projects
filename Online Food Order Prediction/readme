@@ -1,0 +1,45 @@
+🍔 Online Food Order Prediction
+This machine learning project predicts whether a customer will order food again based on demographic, geographic, and behavioral data. It is designed for food delivery platforms like Swiggy or Zomato to identify repeat customers and optimize delivery resources.
+
+🛠 Use Case
+Food delivery companies need to:
+Identify areas with high repeat orders
+Allocate delivery partners efficiently
+Personalize marketing to customer segments
+This model helps predict the likelihood of a customer reordering based on their profile and feedback.
+
+📁 Dataset Overview
+🔢 Records: 388
+
+📄 Columns include:
+Age, Gender, Occupation, Monthly Income
+Educational Qualifications, Family size, Feedback
+Latitude, Longitude, Pin code
+Output: Whether the customer reordered (Yes or No)
+
+📊 Exploratory Insights
+Most frequent reorders come from the 22–25 age group
+Singles and small families are primary users
+A significant number of repeat customers are students or individuals with low/no income
+
+🧠 Model Details
+Algorithm: Random Forest Classifier
+Accuracy: ~94.9% on test data
+Target: Output (Will reorder: Yes/No)
+
+Features Used:
+Age, Gender, Marital Status, Occupation
+Income, Education, Family Size
+Location pin code, Feedback
+
+🔮 Prediction Demo
+# Sample input
+features = np.array([[23, 0, 1, 1, 10000, 2, 1, 1234, 1]])
+
+# Predict
+model.predict(features)  # Output: ['Yes']
+📌 Business Value
+Target high-potential customers
+Personalize promotions based on user behavior
+Optimize delivery partner distribution by pin code
+
