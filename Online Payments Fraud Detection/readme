@@ -1,0 +1,40 @@
+💳 Online Payments Fraud Detection
+This project uses machine learning to classify online transactions as fraudulent or non-fraudulent, helping financial platforms and credit card companies identify risky activities in real time.
+
+🎯 Objective
+The goal is to detect fraudulent transactions based on transaction metadata such as amount, type, balance before and after transaction, and more.
+
+📁 Dataset Overview
+Records: 15,204
+
+Features:
+step: Time step (1 unit = 1 hour)
+type: Type of transaction (PAYMENT, TRANSFER, etc.)
+amount: Transaction amount
+oldbalanceOrg / newbalanceOrig: Originator's balance before/after
+oldbalanceDest / newbalanceDest: Recipient's balance before/after
+isFraud: Indicates if transaction is fraud
+
+🔍 Key Insights
+Majority of transactions are of type PAYMENT
+Fraud is most common in TRANSFER and CASH_OUT
+Fraud is weakly correlated with transaction amount
+
+🧠 Model Details
+Model Used: Decision Tree Classifier
+Accuracy: 99.86% on test data
+
+Features Used:
+type (encoded)
+amount
+oldbalanceOrg
+newbalanceOrig
+
+🔮 Prediction Example
+# Sample transaction input
+features = np.array([[4, 9000.60, 9000.60, 0.0]])  # Type: TRANSFER
+model.predict(features)  # Output: ['No Fraud']
+🧾 Business Impact
+Helps prevent unauthorized charges
+Enhances security in payment platforms
+Boosts customer trust and satisfaction
