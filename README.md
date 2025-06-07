@@ -3,6 +3,7 @@ Welcome to my collection of end-to-end Machine Learning projects! This repositor
 
 📁 Project List
 Project Folder	Description
+
 📂 Car Price Prediction	Predicting car prices using features like brand, mileage, engine specs using Decision Tree Regressor.
 
 📂 Food Delivery Time Prediction	Forecasting food delivery time using distance, age, and ratings with LSTM.
