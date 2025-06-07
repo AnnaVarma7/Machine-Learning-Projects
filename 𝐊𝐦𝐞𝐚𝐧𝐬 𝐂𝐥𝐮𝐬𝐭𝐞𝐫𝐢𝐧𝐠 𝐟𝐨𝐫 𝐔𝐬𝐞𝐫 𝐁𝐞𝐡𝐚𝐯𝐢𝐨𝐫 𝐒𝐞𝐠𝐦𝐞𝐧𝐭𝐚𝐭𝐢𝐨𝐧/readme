@@ -1,0 +1,64 @@
+👥 K-Means Clustering for User Behavior Segmentation
+This project leverages clustering techniques to profile users based on their online behavior, engagement metrics, and demographics. It helps uncover distinct user groups to drive data-informed, targeted marketing and product strategies.
+
+🎯 Objective
+To segment users into meaningful behavioral groups for:
+Personalized marketing
+Targeted ad campaigns
+Better product recommendations
+
+📁 Dataset Overview
+Each row represents a unique user with attributes like:
+Demographics: Age, Gender, Income, Education
+Behavior: Time spent online, Likes, Reactions
+Engagement: CTR, Conversion Rate, Ad Interaction
+Interests: Top personal interests (e.g. Fitness, Tech, Gaming)
+The dataset contains no missing values, making it ideal for modeling.
+
+🔍 Key Steps
+1. Exploratory Data Analysis (EDA)
+Distribution of demographics (age, gender, income)
+Device usage analysis
+Time spent online on weekdays vs. weekends
+Engagement with ads and platform content
+Interest profiling using frequency plots
+
+2. Feature Selection
+Features chosen for clustering:
+Age
+Gender
+Income Level
+Time Spent Online (weekday/weekend)
+Likes and Reactions
+Click-Through Rates (CTR)
+
+3. Preprocessing
+One-hot encoding of categorical variables
+Standardization of numeric variables
+Combined using ColumnTransformer and Pipeline
+
+4. Clustering
+KMeans clustering with 5 segments
+Labels assigned and visualized
+
+📊 Segment Summary
+Cluster	Segment Name	Key Traits
+0	Weekend Warriors	Active on weekends, moderate engagement, mid-to-high income
+1	Engaged Professionals	High activity & CTR, balanced time online, mostly male
+2	Low-Key Users	Modest engagement, weekday preference, moderate CTR
+3	Active Explorers	High online time, lower CTR, high-income female users
+4	Budget Browsers	Least engagement, lowest income, minimal ad interaction
+
+📈 Visualization
+EDA Charts: Seaborn barplots and histograms
+Radar Chart: Using Plotly to compare clusters across key behavioral features
+
+🧠 Tech Stack
+Python (pandas, seaborn, matplotlib, plotly)
+scikit-learn (KMeans, pipelines, transformers)
+
+✅ Outcomes
+Segmented users into 5 data-driven personas
+Created a foundation for targeted campaigns based on user profiles
+Demonstrated the value of combining behavioral data with demographic features
+
